@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Username qidiruv</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="logo">🔎</div>
+      <h1>Username qidiruv</h1>
+      <p class="sub">400+ sayt va ijtimoiy tarmoqdagi ochiq profillar</p>
+    </header>
+
+    <form id="form" class="search" autocomplete="off">
+      <span class="at">@</span>
+      <input id="username" type="text" placeholder="username" spellcheck="false"
+             autocapitalize="off" maxlength="40" required />
+      <button id="btn" type="submit">Qidirish</button>
+    </form>
+
+    <section id="status" class="status hidden">
+      <div class="status-row">
+        <div class="spinner" id="spinner"></div>
+        <span id="statusText">Qidirilmoqda…</span>
+        <b id="count" class="count">0</b>
+      </div>
+      <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+    </section>
+
+    <div id="filterWrap" class="filter hidden">
+      <input id="filter" type="text" placeholder="Natijalar ichidan izlash…" />
+      <button id="copyAll" type="button">Nusxalash</button>
+    </div>
+
+    <ul id="results" class="results"></ul>
+
+    <p id="empty" class="empty">Username kiriting va qidiruvni boshlang.<br/>
+      Odatda 1–3 daqiqa davom etadi.</p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
