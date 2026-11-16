@@ -29,8 +29,8 @@ Mini app uchun HTTPS kerak — lokal sinovda `ngrok http 8080` va chiqqan manzil
 
 ## Render'ga joylash
 1. Render → New → Blueprint → shu repo (`render.yaml` avtomatik o'qiladi).
-2. `BOT_TOKEN` va `WEBAPP_URL` (`https://<servis>.onrender.com`) ni kiriting.
-3. Deploy. Bot polling bilan ishlaydi, shuning uchun servis doim yoniq bo'lishi kerak (bepul tarif uxlab qoladi).
+2. Faqat `BOT_TOKEN` ni kiriting — manzil (`RENDER_EXTERNAL_URL`) Render tomonidan avtomatik beriladi.
+3. Deploy. Hostingda bot **webhook** rejimida ishlaydi (bepul tarifda server uxlasa ham, Telegram xabari uni uyg'otadi; birinchi javob ~30–60 soniya kechikishi mumkin). Lokal ishga tushirilganda (`PUBLIC_URL` yo'q) polling ishlaydi.
 
 ## Eslatma
 Faqat ochiq (public) ma'lumot qidiriladi. O'zingiz yoki ruxsat bergan odamlar haqida, qonuniy maqsadda foydalaning.

@@ -5,7 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-WEBAPP_URL = os.getenv("WEBAPP_URL", "")  # https://... (mini app manzili)
+# Serverning ochiq HTTPS manzili. Render buni RENDER_EXTERNAL_URL orqali o'zi beradi.
+PUBLIC_URL = (os.getenv("PUBLIC_URL") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/")
+WEBAPP_URL = os.getenv("WEBAPP_URL") or (PUBLIC_URL + "/" if PUBLIC_URL else "")  # mini app manzili
 PORT = int(os.getenv("PORT", "8080"))
 
 # Sherlock sozlamalari
